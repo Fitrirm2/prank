@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gabut</title>
+    
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <h1>Klik dong kalo berani!!!</h1>
+    <div class="container">
+        <button id="prankBtn" onclick="prank()">Klik ini</button>
+    </div>
+
+    <script>
+        let size = 18;
+        function prank() {
+            let button = document.getElementById('prankBtn');
+            size += 10; 
+            button.style.fontSize = `${size}px`;
+
+            if (size > 50) {
+                button.innerText = "BUAT ELU!!!";
+            }
+            if (size > 100) {
+                button.innerText = "FUCEK!!";
+            }
+            if (size > 150) {
+                alert("SEKIAN TERIMA KASIH😂");
+                button.style.fontSize = "18px"; // Reset ukuran
+                button.innerText = "Klik Aku Lagi!";
+                size = 18;
+            }
+        }
+    </script>
+
+</body>
+</html>
